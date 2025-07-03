@@ -3,7 +3,8 @@ import React from 'react';
 import { Platform } from 'react-native';
 
 import { HapticTab } from '@/components/HapticTab';
-import { IconSymbol } from '@/components/ui/IconSymbol';
+// import { IconSymbol } from '@/components/ui/IconSymbol';
+import { MaterialIcons } from '@expo/vector-icons';
 import TabBarBackground from '@/components/ui/TabBarBackground';
 import { Colors } from '@/constants/Colors';
 import { useColorScheme } from '@/hooks/useColorScheme';
@@ -30,14 +31,28 @@ export default function TabLayout() {
         name="index"
         options={{
           title: 'Home',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
+          tabBarIcon: ({ color }) => <MaterialIcons name="home" size={30} color="#FFF1CA" />,
         }}
       />
       <Tabs.Screen
-        name="explore"
+        name="list"
         options={{
-          title: 'Explore',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
+          title: 'List',
+          tabBarIcon: ({ color }) => <MaterialIcons name="list" size={30} color="#FFF1CA" />,
+        }}
+      />
+      <Tabs.Screen
+        name="search" 
+        options={{
+          title: 'Search',
+          tabBarIcon: ({ color }) => <MaterialIcons name="search" size={30} color="#FFF1CA" />,
+        }}
+      />
+      <Tabs.Screen
+        name="about"
+        options={{
+          title: 'About',
+          tabBarIcon: ({ color }) => <MaterialIcons name="info" size={30} color="#FFF1CA" />,
         }}
       />
     </Tabs>

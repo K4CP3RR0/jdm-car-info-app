@@ -24,3 +24,5 @@ export const Colors = {
     tabIconSelected: tintColorDark,
   },
 };
+
+//https://colorhunt.co/palette/171717444444da0037ededed

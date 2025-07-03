@@ -9,48 +9,33 @@ import { ThemedView } from '@/components/ThemedView';
 export default function HomeScreen() {
   return (
     <ParallaxScrollView
-      headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
+      headerBackgroundColor={{ light: '#A1CEDC', dark: '#000000' }}
       headerImage={
         <Image
-          source={require('@/assets/images/partial-react-logo.png')}
-          style={styles.reactLogo}
+          source={require('@/assets/images/jdm-logo.png')}
+          style={styles.jdmLogo}
         />
       }>
       <ThemedView style={styles.titleContainer}>
         <ThemedText type="title">Welcome!</ThemedText>
-        <HelloWave />
+        
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 1: Try it</ThemedText>
-        <ThemedText>
-          Edit <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText> to see changes.
-          Press{' '}
-          <ThemedText type="defaultSemiBold">
-            {Platform.select({
-              ios: 'cmd + d',
-              android: 'cmd + m',
-              web: 'F12',
-            })}
-          </ThemedText>{' '}
-          to open developer tools.
-        </ThemedText>
+        <ThemedText type="subtitle">You can find here info about well known Japanese Domestic Market cars but about 1 of 1 versions too.</ThemedText>
+        
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 2: Explore</ThemedText>
-        <ThemedText>
-          {`Tap the Explore tab to learn more about what's included in this starter app.`}
-        </ThemedText>
+        <ThemedText type='subtitle'>Checkout list of all cars or search it with filters in search option. </ThemedText>
+          <ThemedText type='subtitle'>Below you can find list of updates which cars are added</ThemedText>
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 3: Get a fresh start</ThemedText>
-        <ThemedText>
-          {`When you're ready, run `}
-          <ThemedText type="defaultSemiBold">npm run reset-project</ThemedText> to get a fresh{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> directory. This will move the current{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> to{' '}
-          <ThemedText type="defaultSemiBold">app-example</ThemedText>.
-        </ThemedText>
-      </ThemedView>
+        <ThemedText type="subtitle">Updates:</ThemedText>
+        <ThemedText>1. Added Toyota Supra MK4</ThemedText>
+        <ThemedText>2. Added Nissan Skyline GT-R R34</ThemedText>
+        <ThemedText>3. Added Honda NSX Type R</ThemedText>
+        <ThemedText>4. Added Mazda RX-7 FD3S</ThemedText>
+        <ThemedText>5. Added Mitsubishi Lancer Evolution VI</ThemedText>
+        </ThemedView>
     </ParallaxScrollView>
   );
 }
@@ -65,11 +50,12 @@ const styles = StyleSheet.create({
     gap: 8,
     marginBottom: 8,
   },
-  reactLogo: {
+  jdmLogo: {
     height: 178,
-    width: 290,
-    bottom: 0,
-    left: 0,
+    width: 300,
+    bottom: 5,
+    left: 60,
     position: 'absolute',
+    alignContent: 'center',
   },
 });
