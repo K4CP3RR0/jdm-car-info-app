@@ -1,50 +1,151 @@
-# Welcome to your Expo app 👋
+# 🚗 JDM Car Info App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A comprehensive mobile application dedicated to Japanese Domestic Market (JDM) cars, featuring detailed information about iconic and rare JDM vehicles.
 
-## Get started
+![JDM Logo](assets/images/jdm-logo.png)
 
-1. Install dependencies
+## 📱 Features
 
+- **Car Database**: Browse through a curated collection of JDM cars
+- **Detailed Information**: View comprehensive details about each vehicle including:
+  - Brand and model information
+  - Body type specifications
+  - Engine capacity details
+  - High-quality images
+- **Search & Filter**: Find specific cars using advanced search functionality
+- **Modern UI**: Beautiful, responsive interface with dark/light theme support
+- **Cross-Platform**: Works on iOS, Android, and Web
+
+## 🚀 Current Car Collection
+
+The app currently features information about these legendary JDM cars:
+
+1. **Toyota Supra MK4** - The legendary twin-turbo icon
+2. **Nissan Skyline GT-R R34** - The ultimate Godzilla
+3. **Honda NSX Type R** - The supercar from Honda
+4. **Mazda RX-7 FD3S** - The rotary-powered beauty
+5. **Mitsubishi Lancer Evolution VI** - The rally-bred legend
+
+*More cars are being added regularly!*
+
+## 🛠️ Tech Stack
+
+- **Framework**: React Native with Expo
+- **Navigation**: Expo Router with bottom tabs
+- **TypeScript**: Full TypeScript support
+- **Styling**: StyleSheet with themed components
+- **State Management**: React Hooks
+- **Images**: Expo Image for optimized image handling
+- **Development**: ESLint for code quality
+
+## 📋 Prerequisites
+
+Before running this project, make sure you have:
+
+- Node.js (v18 or later)
+- npm or yarn
+- Expo CLI
+- For mobile development:
+  - Android Studio (for Android)
+  - Xcode (for iOS, macOS only)
+
+## 🚀 Getting Started
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone <repository-url>
+   cd jdm-car-info-app
+   ```
+
+2. **Install dependencies**
    ```bash
    npm install
    ```
 
-2. Start the app
-
+3. **Start the development server**
    ```bash
-   npx expo start
+   npm start
    ```
 
-In the output, you'll find options to open the app in a
+### Running on Different Platforms
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+- **iOS**: `npm run ios`
+- **Android**: `npm run android`
+- **Web**: `npm run web`
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## 📱 App Structure
 
-## Get a fresh project
+```
+app/
+├── (tabs)/                 # Tab-based navigation
+│   ├── index.tsx          # Home screen
+│   ├── list.tsx           # Car list screen
+│   ├── search.tsx         # Search functionality
+│   └── about.tsx          # About page
+├── _layout.tsx            # Root layout
+└── +not-found.tsx         # 404 page
 
-When you're ready, run:
-
-```bash
-npm run reset-project
+components/
+├── CarList.tsx            # Car listing component
+├── CarScreen.tsx          # Individual car details
+├── ThemedText.tsx         # Themed text component
+├── ThemedView.tsx         # Themed view component
+└── ui/                    # UI components
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## 🎨 Screenshots
 
-## Learn more
+*Screenshots will be added soon*
 
-To learn more about developing your project with Expo, look at the following resources:
+## 🤝 Contributing
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
 
-## Join the community
+### Contributing Guidelines
 
-Join our community of developers creating universal apps.
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## 📝 Roadmap
+
+- [ ] Add more JDM cars to the database
+- [ ] Implement advanced search filters (year, engine type, etc.)
+- [ ] Add car comparison feature
+- [ ] Include specifications and performance data
+- [ ] Add user favorites functionality
+- [ ] Implement car news section
+- [ ] Add community features
+
+## 🐛 Issues
+
+Found a bug? Please open an issue on GitHub with:
+- Device/platform information
+- Steps to reproduce
+- Expected vs actual behavior
+- Screenshots (if applicable)
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 👨‍💻 Developer
+
+Created with ❤️ by **808Dev**
+
+![808Dev Logo](assets/images/808devlogo.png)
+
+## 🙏 Acknowledgments
+
+- Thanks to the JDM community for inspiration
+- Expo team for the amazing framework
+- React Native community for continuous support
+
+---
+
+**Note**: This app is for educational and informational purposes. All car information is sourced from publicly available data and community contributions.
+
