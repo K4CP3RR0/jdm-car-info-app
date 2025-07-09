@@ -21,6 +21,20 @@ export default function RootLayout() {
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
       <Stack>
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+        <Stack.Screen 
+          name="car-info" 
+          options={{ 
+            title: 'Back',
+            headerBackTitle: 'Back',
+            headerStyle: {
+              backgroundColor: '#171717',
+            },
+            headerTintColor: '#EDEDED',
+            headerTitleStyle: {
+              fontWeight: 'bold',
+            },
+          }} 
+        />
         <Stack.Screen name="+not-found" />
       </Stack>
       <StatusBar style="auto" />

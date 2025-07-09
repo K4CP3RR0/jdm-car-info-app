@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { View, Text, FlatList, Image, StyleSheet, ScrollView, TouchableOpacity} from "react-native";
 import { ThemedView } from '@/components/ThemedView';
+import { useRouter } from 'expo-router';
 
 
-const API_URL = "http://192.168.1.223:3000/jdmcars";
+const API_URL = "http://808dev.pl/jdmcars";
 
 export default function CarList() {
   const [cars, setCars] = useState([]);
+  const router = useRouter();
 
   useEffect(() => {
     fetch(API_URL)
@@ -16,7 +18,10 @@ export default function CarList() {
   }, []);
 
   const renderCar = ({ item }) => (
-    <TouchableOpacity>
+    <TouchableOpacity onPress={() => router.push({
+      pathname: '/car-info',
+      params: { carData: JSON.stringify(item) }
+    })}>
 
     
     <View style={styles.card}>
@@ -26,13 +31,13 @@ export default function CarList() {
         <Text style={styles.noImage}>No image</Text>
       )}
       <Text style={styles.title}>{item.brand} {item.model}</Text>
-      <Text style={styles.cardText}>Body: {item.body_type?.join(", ") || "N/A"}</Text>
+      {/* <Text style={styles.cardText}>Body: {item.body_type?.join(", ") || "N/A"}</Text>
       <Text style={styles.cardText}>Engine Capacity: {item.engine_capacity?.join(", ") || "N/A"} L</Text>
       <Text style={styles.cardText}>Fuel: {item.fuel_type || "N/A"}</Text>
       <Text style={styles.cardText}>Transmission: {item.transmission_type?.join(", ") || "N/A"}</Text>
       <Text style={styles.cardText}>Power (kW): {item.power_in_kW?.join(", ") || "N/A"}</Text>
       <Text style={styles.cardText}>Drive: {item.drive_type || "N/A"}</Text>
-      <Text style={styles.cardText}>Equipment Versions: {item.equipment_versions?.join(", ") || "N/A"}</Text>
+      <Text style={styles.cardText}>Equipment Versions: {item.equipment_versions?.join(", ") || "N/A"}</Text> */}
       <Text style={styles.cardText}>Years of productions: {item.years || "N/A"}</Text>
     </View>
     </TouchableOpacity>
@@ -79,6 +84,7 @@ const styles = StyleSheet.create({
     elevation: 3,
     
     
+    
   },
   list: {
     top:10,
@@ -89,6 +95,7 @@ const styles = StyleSheet.create({
     color: "#EDEDED",
     fontSize: 14,
     marginBottom: 5,
+
   },
 
   image: {
